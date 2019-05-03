@@ -1,0 +1,20 @@
+.button-card {
+    margin: 10% 10%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        margin: 20px;
+    }
+
+    .button-card__button--primary {
+        color: white;
+    }
+
+    .button-card__button--secondary {
+        color: aliceblue;
+    }
+}
