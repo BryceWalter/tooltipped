@@ -10,5 +10,4 @@ export class TooltipContainerComponent {
 
   constructor(public tooltipService: TooltipService) { }
 
-
 }

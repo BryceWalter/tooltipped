@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input, HostListener, ElementRef, Renderer2 } from '@angular/core';
 import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
@@ -11,7 +11,10 @@ export class TooltipContentComponent implements OnInit {
   @Input() tip: string;
   @Input() ref: any;
 
+  constructor(private element: ElementRef, private renderer: Renderer2) {}
+
   ngOnInit() {
+    this.renderer.appendChild(this.ref.nativeElement, this.element.nativeElement)
   }
 
   @HostListener('window:resize')

@@ -9,6 +9,5 @@ export class TooltipService {
 
   push(e): void {
     this.components.push(e);
-    console.log(this.components)
   }
 }

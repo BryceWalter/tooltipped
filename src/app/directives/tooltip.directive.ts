@@ -6,18 +6,17 @@ import { TooltipService } from '../services/tooltip.service';
 })
 export class TooltipDirective implements OnDestroy {
 
-  @Input() tooltipText: string = "Nutso";
+  @Input() tooltipText: string = "";
 
   private id: number;
 
-  constructor(private tooltipService: TooltipService, private element: ElementRef) { }
+  constructor(
+    private tooltipService: TooltipService,
+    private element: ElementRef
+  ) { }
 
   @HostListener("click", ['$event.target'])
   onClick(button): void {
-    console.log(button)
-    console.log(this.tooltipText)
-    // console.log(this.tooltipText = 'what')
-    console.log(this.element)
     this.id = Math.random();
     this.tooltipService.push({ 
       id: this.id, 
