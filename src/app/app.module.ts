@@ -10,13 +10,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { TooltipDirective } from './directives/tooltip.directive';
 import { TooltipContentComponent } from './components/tooltip-content/tooltip-content.component';
+import { TooltipContainerComponent } from './components/tooltip-container/tooltip-container.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TooltipDirective,
-    TooltipContentComponent
+    TooltipContentComponent,
+    TooltipContainerComponent
   ],
   imports: [
     BrowserModule,

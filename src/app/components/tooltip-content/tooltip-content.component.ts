@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-tooltip-content',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input, HostListener } from '@angular/core';
 })
 export class TooltipContentComponent implements OnInit {
 
-  @Input() title: string;
+  @Input() tip: string;
   @Input() ref: any;
 
   ngOnInit() {
@@ -15,7 +16,7 @@ export class TooltipContentComponent implements OnInit {
 
   @HostListener('window:resize')
   onWindowResize(): void {
-    
+
   }
 
 }
