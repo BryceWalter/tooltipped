@@ -1,12 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<app-tooltip-container></app-tooltip-container>
 <mat-toolbar class="nav" color="primary">
   <span class="nav__title">{{title}}</span>
 </mat-toolbar>
-
 <router-outlet>
   <mat-card class="button-card">
-    <button appTooltip tooltipText="Noice" class="button-card__button--primary" mat-raised-button color="primary">Tooltip A</button>
-    <button appTooltip tooltipText="excellent" class="button-card__button--secondary" mat-raised-button color="accent">Tooltip B</button>
-    <app-tooltip-container></app-tooltip-container>
+    <button appTooltip tooltipText="Noice" tooltipPosition="top" class="button-card__button--primary" mat-raised-button color="primary">Tooltip A</button>
+    <button appTooltip tooltipText="excellent" tooltipPosition="bottom" class="button-card__button--secondary" mat-raised-button color="accent">Tooltip B</button>
   </mat-card>
 </router-outlet>

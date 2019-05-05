@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { TooltipDirective } from './directives/tooltip.directive';
 import { TooltipContentComponent } from './components/tooltip-content/tooltip-content.component';
 import { TooltipContainerComponent } from './components/tooltip-container/tooltip-container.component';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { TooltipContainerComponent } from './components/tooltip-container/toolti
     AppComponent,
     TooltipDirective,
     TooltipContentComponent,
-    TooltipContainerComponent
+    TooltipContainerComponent,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,

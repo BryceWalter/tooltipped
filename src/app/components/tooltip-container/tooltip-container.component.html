@@ -2,6 +2,10 @@
   <app-tooltip-content
     *ngFor="let tooltip of tooltipService.components"
     [tip]="tooltip.tip"
-    [ref]="tooltip.ref">
+    [ref]="tooltip.ref"
+    [position]="tooltip.position"
+    appClickOutside 
+    [ignoreClick]="tooltip.ref"
+  >
   </app-tooltip-content>
 </div>

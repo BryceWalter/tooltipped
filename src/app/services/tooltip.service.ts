@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Observable, of, from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TooltipService {
 
-  components: any[] = [];
+  public components: any[] = [];
 
-  push(e): void {
+  public tooltipObserver = from(this.components)
+
+  public push(e): void {
     this.components.push(e);
   }
+
 }
