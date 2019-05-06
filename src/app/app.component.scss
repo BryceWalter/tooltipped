@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 200%;
 
     button {
         margin: 20px;
@@ -16,5 +17,6 @@
 
     .button-card__button--secondary {
         color: aliceblue;
+        margin-top: 100px;
     }
 }
