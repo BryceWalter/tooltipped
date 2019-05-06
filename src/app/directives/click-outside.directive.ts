@@ -16,7 +16,6 @@ export class ClickOutsideDirective {
     const clickedInside = this.element.nativeElement.contains(e.target);
     const notClickedIgnore = this.ignoreClick.nativeElement.contains(e.target)
     if (!clickedInside && !notClickedIgnore) {
-      console.log('ok')
       this.tooltipService.components.pop();
     }
   }

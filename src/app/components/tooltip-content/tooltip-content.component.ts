@@ -25,7 +25,7 @@ export class TooltipContentComponent {
   private positionTooltip() {
     // Get position of trigger element in document
     const elementPosition = this.ref.nativeElement.getBoundingClientRect();
-    const { x, y } = elementPosition;
+    const { x, y, height } = elementPosition;
     // Get height of tooltip to move in either bottom or top direction
     const tooltipHeight =  this.element.nativeElement.firstChild.clientHeight;
     // Set element to absolute position
@@ -35,7 +35,7 @@ export class TooltipContentComponent {
     switch (this.position) {
       case 'bottom':
         this.renderer.setStyle(this.element.nativeElement, "left", `${x}px`)
-        this.renderer.setStyle(this.element.nativeElement, "top", `${y + tooltipHeight + 10}px`)
+        this.renderer.setStyle(this.element.nativeElement, "top", `${y + height + 10}px`)
         break;
       case 'top':
         this.renderer.setStyle(this.element.nativeElement, "left", `${x}px`)
@@ -48,7 +48,7 @@ export class TooltipContentComponent {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event) {
+  onResize(e) {
     this.positionTooltip();
   }
 }
