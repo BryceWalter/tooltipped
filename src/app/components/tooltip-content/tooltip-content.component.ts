@@ -54,7 +54,7 @@ export class TooltipContentComponent {
   }
 
   @HostListener('window:scroll', ['$event']) 
-    doSomething(event) {
+    responsiveFlip(event) {
       const tooltipPosition = this.element.nativeElement.getBoundingClientRect();
       const elementPosition = this.ref.nativeElement.getBoundingClientRect();
       const { left, top, height } = elementPosition;
